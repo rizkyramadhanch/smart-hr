@@ -2,8 +2,8 @@ package api
 
 import(
 	"github.com/gin-gonic/gin"
-	"hr/modules/employees/repositories"
-	"hr/modules/employees/models"
+	"smart-hr/modules/employees/repositories"
+	"smart-hr/modules/employees/models"
 	_ "strconv"
 )
 

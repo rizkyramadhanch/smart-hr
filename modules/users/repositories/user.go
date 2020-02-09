@@ -1,12 +1,12 @@
 package repositories
 
 import(
-	"hr/database"
-	"hr/library/jwt"
+	"smart-hr/database"
+	"smart-hr/library/jwt"
 	// CompanyModel "hr/modules/companies/models"
-	"hr/modules/users/models"
+	"smart-hr/modules/users/models"
 	"fmt"
-	"hr/library/logger"
+	"smart-hr/library/logger"
 )
 
 type UserRepositories struct{}

@@ -3,8 +3,8 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 	_ "strconv"
-	"hr/modules/companies/repositories"
-	"hr/modules/companies/models"
+	"smart-hr/modules/companies/repositories"
+	"smart-hr/modules/companies/models"
 )
 
 type CompanyController struct{}

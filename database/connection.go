@@ -2,7 +2,7 @@ package database
 
 import (
 	"database/sql"
-	"hr/library/logger"
+	"smart-hr/library/logger"
 	_ "github.com/lib/pq"
 	"fmt"
 	// "hr/config"

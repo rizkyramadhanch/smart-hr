@@ -1,10 +1,10 @@
 package repositories
 
 import(
-	"hr/database"
-	"hr/library/logger"
-	PasswordGenerator "hr/library/jwt"
-	"hr/modules/companies/models"
+	"smart-hr/database"
+	"smart-hr/library/logger"
+	PasswordGenerator "smart-hr/library/jwt"
+	"smart-hr/modules/companies/models"
 )
 
 type CompanyRepositories struct {}

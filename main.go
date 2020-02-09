@@ -2,11 +2,11 @@ package main
 
 import(
 	"github.com/gin-gonic/gin"
-	"hr/config"
-	"hr/modules/users/api"
-	Reports "hr/modules/reports/api"
-	Employee "hr/modules/employees/api"
-	Company "hr/modules/companies/api"
+	"smart-hr/config"
+	"smart-hr/modules/users/api"
+	Reports "smart-hr/modules/reports/api"
+	Employee "smart-hr/modules/employees/api"
+	Company "smart-hr/modules/companies/api"
 	"github.com/gin-contrib/cors"
 )
 

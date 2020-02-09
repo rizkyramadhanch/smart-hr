@@ -2,14 +2,14 @@ package repositories
 
 import (
 	"fmt"
-	"hr/database"
-	"hr/library/logger"
-	"hr/modules/employees/models"
+	"smart-hr/database"
+	"smart-hr/library/logger"
+	"smart-hr/modules/employees/models"
 )
 
-type EmployeeRepositories struct {}
+type EmployeeRepositories struct{}
 
-func(r *EmployeeRepositories) GetAll()(result []models.Employee, err error){
+func (r *EmployeeRepositories) GetAll() (result []models.Employee, err error) {
 	query := "select id, employee_id, nik, bpjs_id, join_date, first_name, last_name, place_of_birth, birthday, address, age, sallary from employees"
 	rows, err := database.DB.Query(query)
 	if err != nil {
@@ -20,8 +20,7 @@ func(r *EmployeeRepositories) GetAll()(result []models.Employee, err error){
 	employees := []models.Employee{}
 	employee := models.Employee{}
 
-
-	for rows.Next(){
+	for rows.Next() {
 		errScan := rows.Scan(
 			&employee.ID,
 			&employee.EmployeeID,
@@ -37,13 +36,13 @@ func(r *EmployeeRepositories) GetAll()(result []models.Employee, err error){
 			&employee.Sallary,
 		)
 		if errScan != nil {
-			fmt.Println("Failed while scanning users", errScan) 
+			fmt.Println("Failed while scanning users", errScan)
 			return result, err
 		}
 
 		employees = append(employees, employee)
 	}
-	
+
 	return employees, nil
 }
 
@@ -59,4 +58,4 @@ func (r *EmployeeRepositories) Add(form models.Employee) (result string, err err
 	}
 
 	return "New Employee has been added", nil
-} 
+}

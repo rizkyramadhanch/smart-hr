@@ -1,7 +1,7 @@
 package jwt
 
 import (
-    "hr/library/logger"
+    "smart-hr/library/logger"
 	"golang.org/x/crypto/bcrypt"
 )
 

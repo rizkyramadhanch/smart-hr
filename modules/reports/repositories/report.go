@@ -1,10 +1,10 @@
 package repositories
 
 import (
-	"hr/database"
+	"smart-hr/database"
 	"fmt"
-	"hr/library/logger"
-	ReportModel "hr/modules/reports/models"
+	"smart-hr/library/logger"
+	ReportModel "smart-hr/modules/reports/models"
 )
 
 type ReportRepositories struct{}
