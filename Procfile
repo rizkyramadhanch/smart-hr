@@ -1,1 +1,1 @@
-web: hr
+web: smart-hr
