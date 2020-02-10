@@ -48,6 +48,6 @@ func main(){
 	r.POST("/companies/add", CompanyController.Add)
 	r.GET("/companies", CompanyController.GetAll)
 	
-	fmt.Println("service running on port " + config.Host + ":" + config.Port)
+	fmt.Println("service running on port " + config.Host + ":" + os.Getenv("PORT"))
 	r.Run(":" + os.Getenv("PORT"))
 }

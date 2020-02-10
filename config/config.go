@@ -10,7 +10,7 @@ var (
 )
 
 func Init(){
-	os.Setenv("PORT", "8081")
+	os.Setenv("PORT", "8000")
 	os.Setenv("HOST", "127.0.0.1")
 	os.Setenv("DB_HOST", "127.0.0.1")
 	os.Setenv("DB_PORT", "5432")
