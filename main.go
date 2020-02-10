@@ -47,6 +47,6 @@ func main(){
 	r.POST("/companies/add", CompanyController.Add)
 	r.GET("/companies", CompanyController.GetAll)
 	
-	fmt.Println("service running on port " + config.Port)
-	r.Run(config.DBHost + ":" + config.Port)
+	fmt.Println("service running on port " + config.Host + ":" + config.Port)
+	r.Run(config.Host + ":" + config.Port)
 }
