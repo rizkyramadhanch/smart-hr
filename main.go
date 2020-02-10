@@ -8,6 +8,7 @@ import(
 	Employee "smart-hr/modules/employees/api"
 	Company "smart-hr/modules/companies/api"
 	"github.com/gin-contrib/cors"
+	"fmt"
 )
 
 func main(){
@@ -46,5 +47,6 @@ func main(){
 	r.POST("/companies/add", CompanyController.Add)
 	r.GET("/companies", CompanyController.GetAll)
 	
+	fmt.Println("service running on port " + config.Port)
 	r.Run(config.DBHost + ":" + config.Port)
 }
