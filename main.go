@@ -1,6 +1,7 @@
 package main
 
 import(
+	"os"
 	"github.com/gin-gonic/gin"
 	"smart-hr/config"
 	"smart-hr/modules/users/api"
@@ -9,7 +10,6 @@ import(
 	Company "smart-hr/modules/companies/api"
 	"github.com/gin-contrib/cors"
 	"fmt"
-	"os"
 )
 
 func main(){
