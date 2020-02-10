@@ -48,5 +48,5 @@ func main(){
 	r.GET("/companies", CompanyController.GetAll)
 	
 	fmt.Println("service running on port " + config.Host + ":" + config.Port)
-	r.Run("127.0.0.1" + ":" + config.Port)
+	r.Run(":" + config.Port)
 }
