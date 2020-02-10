@@ -3,17 +3,16 @@ package main
 import(
 	"os"
 	"github.com/gin-gonic/gin"
-	"smart-hr/config"
 	"smart-hr/modules/users/api"
 	Reports "smart-hr/modules/reports/api"
 	Employee "smart-hr/modules/employees/api"
 	Company "smart-hr/modules/companies/api"
 	"github.com/gin-contrib/cors"
-	"fmt"
+	"github.com/joho/godotenv"
 )
 
 func main(){
-	config.Init()
+	// config.Init()
 	r := gin.Default()
 	
 	UserController := api.UserController{}
@@ -50,6 +49,6 @@ func main(){
 	r.POST("/companies/add", CompanyController.Add)
 	r.GET("/companies", CompanyController.GetAll)
 	
-	fmt.Println("service running on port " + config.Host + ":" + os.Getenv("PORT"))
-	r.Run(":" + os.Getenv("PORT"))
+	godotenv.Load()
+	r.Run("localhost" + ":" + os.Getenv("PORT"))
 }
