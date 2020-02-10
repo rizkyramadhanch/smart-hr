@@ -27,6 +27,13 @@ func (u *UserController) GetAll(ctx *gin.Context) {
 	}
 }
 
+func (u *UserController) Hello(ctx *gin.Context) {
+	ctx.JSON(200, gin.H{
+		"message" : "Hello World",
+	})
+	return
+}
+
 func (u *UserController) Login(ctx *gin.Context) {
 	repo := repositories.UserRepositories{}
 	form := UserModel.LoginForm{}
