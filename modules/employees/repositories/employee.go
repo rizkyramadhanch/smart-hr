@@ -33,7 +33,7 @@ func (r *EmployeeRepositories) GetAll() (result []models.Employee, err error) {
 			&employee.Birthday,
 			&employee.Address,
 			&employee.Age,
-			&employee.Sallary,
+			// &employee.Sallary,
 		)
 		if errScan != nil {
 			fmt.Println("Failed while scanning users", errScan)
