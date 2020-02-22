@@ -7,6 +7,7 @@ import(
 	Reports "smart-hr/modules/reports/api"
 	Employee "smart-hr/modules/employees/api"
 	Company "smart-hr/modules/companies/api"
+	Component "smart-hr/modules/components/api"
 	"github.com/gin-contrib/cors"
 	"github.com/joho/godotenv"
 )
@@ -19,6 +20,7 @@ func main(){
 	ReportController := Reports.ReportsController{}
 	EmployeeController := Employee.EmployeeController{}
 	CompanyController := Company.CompanyController{}
+	ComponentController := Component.ComponentController{}
 
 	corsConfig := cors.DefaultConfig()
 	corsConfig.AddAllowHeaders("Authorization")
@@ -40,11 +42,13 @@ func main(){
 	
 	r.GET("/reports/bpjs", ReportController.ShowBPJSReport)
 	r.GET("/reports/bpjs/:id", ReportController.ShowBPJSReportByID)
-	//bpjs/id/month
-
-	//pph
-	//pph
-	//pph
+	
+	r.GET("/reports/sallary", ReportController.SallaryReport)
+	r.GET("/reports/sallary/:id", ReportController.SallaryReportByID)
+	r.GET("/reports/component/:id", ComponentController.GetByID)
+	r.GET("/reports/value/:id", ComponentController.GetComponentValue)
+	r.POST("/reports/value/edit", ComponentController.EditComponentValue)
+	r.POST("/reports/component/add", ComponentController.AddComponentValue)
 	
 	r.POST("/companies/add", CompanyController.Add)
 	r.GET("/companies", CompanyController.GetAll)
