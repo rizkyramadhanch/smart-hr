@@ -28,8 +28,7 @@ func main(){
 	corsConfig.AllowOrigins = []string{"*"}
 	r.Use(cors.New(corsConfig))
 
-	r.GET("/users/hello", UserController.Hello)
-
+	r.GET("/", UserController.Hello)
 
 	r.POST("/auth", UserController.Login)
 	r.POST("/logout/:id", UserController.Logout)
