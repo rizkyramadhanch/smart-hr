@@ -1,1 +1,1 @@
-web:smart-hr
+web:api-smart-hr
